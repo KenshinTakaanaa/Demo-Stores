@@ -1,0 +1,884 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root {
+  --primaryblack: black;
+  --primarywhite: white;
+}
+
+/* ---------------------YO! 1ST SECTION HERO SECTION---------------- */
+
+/*-------------------NAVBAR-----------------------  */
+
+header .logoContainer {
+  color: white;
+}
+
+header .logoContainer a {
+  color: white;
+  font-size: 2vw;
+}
+
+header nav {
+  height: 72px;
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+
+  background: rgba(0, 0, 0, 0.3); /* Transparent background */
+  backdrop-filter: blur(10px); /* Blur effect */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+header nav ul {
+  display: flex;
+  gap: 2rem;
+  position: relative;
+  right: 34px;
+}
+/* header nav ul li {} */
+header nav ul li a {
+  color: var(--primarywhite);
+  font-size: 1.2vw;
+}
+
+.contactBtnContainer img {
+  width: 18px;
+  margin-right: 4px;
+  position: relative;
+  top: 1px;
+}
+
+.contactBtnContainer button {
+  color: black;
+  background-color: #fff;
+  font-size: 1.3vw;
+  letter-spacing: -1px;
+
+  padding: 8px 30px;
+  border-radius: 50px;
+}
+
+/*-------------------------------------herosection----------------------------------  */
+
+.heroSection {
+  background-image: url(Images/hero\ bg.jpg);
+  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+
+}
+
+.heroSectionContainer {
+  padding-top: 120px;
+}
+
+.h1Container {
+  width: 100%;
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+}
+
+.h1Container {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideIn 2s ease-in-out forwards;
+}
+
+@keyframes fadeSlideIn {
+  from {
+      opacity: 0;
+      transform: translateY(0px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.h1Container h1 {
+  color: var(--primarywhite);
+  font-size: 5vw;
+  line-height: 68px;
+
+  margin-bottom: 16px;
+}
+
+.h3Container {
+  width: 100%;
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+}
+
+.h3Container h3 {
+  color: var(--primarywhite);
+  font-size: 1.5vw;
+
+  line-height: 24px;
+}
+
+.getStartedBtnContainer button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Adjust spacing between text and image */
+  margin-top: 20px;
+  margin-bottom: 30px;
+  padding: 12px 60px 14px;
+  color: white;
+  letter-spacing: -1px;
+  background: rgba(0, 0, 0, 0.3); /* Transparent background */
+  backdrop-filter: blur(5px); /* Blur effect */
+  font-size: 1.5vw;
+  border: 1px solid white;
+  border-radius: 25px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: color 0.4s ease-in-out;
+  z-index: 1;
+}
+
+.getStartedBtnContainer button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: white;
+  transition: left 0.4s ease-in-out;
+  z-index: -1;
+}
+
+.getStartedBtnContainer button:hover::before {
+  left: 0;
+}
+
+.getStartedBtnContainer button:hover {
+  color: black;
+}
+
+/* Image styles */
+.getStartedBtnContainer button img {
+  width: 18px;
+  position: relative;
+  top: .8px;
+  transition: filter 0.4s ease, transform 1s ease;
+}
+
+/* Change image on hover */
+.getStartedBtnContainer button:hover img {
+  filter: invert(1); /* Inverts color (black -> white, white -> black) */
+  scale: 1.2;
+  left: 6px;
+}
+
+
+
+
+.discordBubblesContainer {
+  display: flex;
+  justify-content: center;
+  color: white;
+
+  margin-bottom: 2vw;
+}
+
+.bubblesPosition {
+  margin-right: -12px;
+}
+
+.discordImageContainerred {
+  width: 40px;
+  height: 40px;
+
+  position: relative;
+  bottom: 4px;
+
+  background-color: crimson;
+  border-radius: 50%;
+}
+.discordImageContainerblue {
+  width: 40px;
+  height: 40px;
+
+  position: relative;
+  bottom: 4px;
+
+  background-color: cornflowerblue;
+  border-radius: 50%;
+}
+.discordImageContaineryellow {
+  width: 40px;
+  height: 40px;
+
+  position: relative;
+  bottom: 4px;
+
+  background-color: gold;
+  border-radius: 50%;
+}
+.discordImageContainerwhite {
+  width: 40px;
+  height: 40px;
+
+  position: relative;
+  bottom: 4px;
+
+  background-color: white;
+  border-radius: 50%;
+}
+.discordImageContainerorange {
+  width: 40px;
+  height: 40px;
+
+  position: relative;
+  bottom: 4px;
+
+  background-color: coral;
+  border-radius: 50%;
+}
+
+.discordBubblesContainer h4 {
+  margin-left: 20px;
+  font-size: 1.6vw;
+}
+
+.bubblesPosition {
+  transition: ease-in-out 0.3s;
+  cursor: pointer;
+}
+.bubblesPosition:hover {
+  transform: translateY(-10px);
+}
+
+.main3Elements {
+  gap: 8rem;
+  flex-wrap: wrap;
+}
+.main3Elements h4 {
+  color: white;
+}
+
+.firstElementContainer img {
+  width: 50px;
+
+  position: relative;
+  top: 18px;
+  scale: 1.5;
+}
+.firstElementContainer h2 {
+  margin-bottom: -14px;
+}
+.number150M {
+  color: white;
+  font-size: 4.4vw;
+  letter-spacing: 3px;
+}
+
+.secondElementContainer {
+  position: relative;
+  right: 16px;
+}
+
+.secondElementContainer img {
+  width: 50px;
+  
+  position: relative;
+  top: 18px;
+  scale: 1.5;
+}
+.secondElementContainer h2 {
+  margin-bottom: -14px;
+}
+.number6 {
+  font-size: 4.4vw;
+  letter-spacing: 3px;
+  color: white;
+}
+
+.thirdElementContainer {
+  position: relative;
+  right: 16px;
+
+}
+.thirdElementContainer img {
+  width: 50px;
+
+  position: relative;
+  top: 14px;
+  left: 8px;
+  scale: 1.1;
+}
+.thirdElementContainer h2 {
+  color: white;
+  margin-bottom: -14px;
+}
+.number456 {
+  font-size: 4.4vw;
+  letter-spacing: 3px;
+}
+
+/* ======================== -S E C O N D - P A G E- ========================================== */
+
+.secondPage {
+  padding-top: 60px;
+  height: auto;
+  overflow: hidden;
+}
+
+/* .secondPageContainer {} */
+
+.portfolioTextContainer {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.portfolioText {
+  font-size: 6vw;
+  color: white;
+}
+
+/* ===================UNIVERSAL PORTFOLIO TAB SECTIONS==============  */
+
+.tabsContainer {
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 33.5%;
+  font-family: poppins;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+
+  background: linear-gradient(to right, #2d2d2d, rgba(255, 255, 255, 0.318));
+  backdrop-filter: blur(5px);
+  border-radius: 40px;
+}
+.tab {
+  padding: 12px 30px;
+  margin: 0 5px;
+  border-radius: 50px;
+  cursor: pointer;
+
+  color: white;
+  /* transition: ease .4s; */
+}
+.tab:active {
+  scale: .9;
+}
+
+
+
+.active {
+  background: white;
+  color: black;
+  box-shadow: 0px 0px px rgba(255, 255, 255, 0.675);
+}
+.gallery {
+  display: none;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 36px 56px;
+}
+
+.gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: darkgray;
+  border-radius: 5px;
+}
+.show {
+  display: grid;
+}
+
+/*========================== PROJECT SECION =================================== */
+
+.projectGallery {
+  height: auto;
+
+  grid-template-columns: repeat(3, 1fr);
+  /* margin: 0px auto; */
+  padding: 36px 90px;
+}
+
+.projectImageContainer {
+  width: 350px;
+  height: 350px;
+
+  background: linear-gradient(to left, #2d2d2d, rgba(255, 255, 255, 0.318));
+  backdrop-filter: blur(5px);
+
+  border-radius: 5px;
+  position: relative;
+
+  margin-bottom: 10px;
+}
+.projectImage {
+  width: 100%;
+  height: 100%;
+
+  background: transparent;
+}
+
+.projectImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ==MAKING OF IMAGE HOVERING DETAILS */
+
+.projectImageContainer {
+  position: relative; /* Ensure absolute positioning works inside */
+  display: inline-block;
+
+  cursor: pointer;
+}
+
+.projectImageContainer h2,
+.projectImageContainer h4,
+.projectImageContainer .blackShadow {
+  display: none; /* Hide elements by default */
+  position: absolute;
+}
+
+.projectImageContainer h2 {
+  color: white;
+  font-size: 1.5vw;
+  left: 20px;
+  bottom: 20px;
+  z-index: 101;
+}
+
+.projectImageContainer h4 {
+  color: rgba(255, 255, 255, 0.779);
+  font-size: 1vw;
+  left: 20px;
+  bottom: 5px;
+  z-index: 101;
+}
+
+.projectImageContainer .blackShadow {
+  bottom: 0;
+  width: 100%;
+  height: 140px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
+  z-index: 100;
+}
+
+/* Show elements when hovering over the entire container */
+.projectImageContainer:hover h2,
+.projectImageContainer:hover h4,
+.projectImageContainer:hover .blackShadow {
+  display: block;
+}
+
+
+
+/* ======================== -T H I R D - P A G E- ======================== */
+
+
+.thirdPage {
+  padding-top: 40px;
+  padding-inline: 68px;
+}
+
+.thirdPageContainer {
+  padding-left: 26px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.aboutTextContainer {
+  padding-top: 12px;
+  
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 80%;
+  width: 50%;
+  text-align: start;
+}
+
+.aboutTextContainer h2 {
+  font-size: 1.5vw;
+  color: white;
+}
+
+.aboutTextContainer button {
+  position: relative;
+  right: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Adjust spacing between text and image */
+  margin-top: 36px;
+  margin-bottom: 20px;
+  padding: 12px 200px 14px;
+  color: white;
+  letter-spacing: -1px;
+  background: rgba(0, 0, 0, 0.3); /* Transparent background */
+  backdrop-filter: blur(5px); /* Blur effect */
+  font-size: 1.5vw;
+  border: 1px solid white;
+  border-radius: 25px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: color 0.4s ease-in-out;
+  z-index: 1;
+  font-weight: 500;
+}
+
+.aboutTextContainer button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: white;
+  transition: left 0.4s ease-in-out;
+  z-index: -1;
+}
+
+.aboutTextContainer button:hover::before {
+  left: 0;
+}
+
+.aboutTextContainer button:hover {
+  color: black;
+}
+
+/* Image styles */
+.aboutTextContainer button img {
+  width: 18px;
+  position: relative;
+  top: .8px;
+  transition: filter 0.4s ease, transform 1s ease;
+}
+
+/* Change image on hover */
+.aboutTextContainer button:hover img {
+  filter: invert(1); /* Inverts color (black -> white, white -> black) */
+  scale: 1.2;
+  left: 6px;
+}
+
+
+.aboutImageContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  height: 90%;
+  width: 50%;
+  
+  padding-bottom: 43px;
+}
+
+.aboutImageContainer img {
+  height: 38vw;
+  width: 36vw;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  
+  object-fit: cover;
+}
+
+
+
+/* ======================== -F O U R T H  - P A G E- ======================== */
+
+
+.forthPage {
+  padding-top: 60px;
+  padding-bottom: 40px;
+  height: auto;
+}
+
+.forthPageContainer {
+  width: 80%;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+}
+
+
+.forthPageContainer h2 {
+  font-size: 4vw;
+  margin-bottom: 40px;
+}
+.forthPageContainer p {
+  text-align: center;
+  color: #bbb;
+}
+.faq-container {
+  width: 70vw;
+  margin: auto;
+  text-align: left;
+}
+.faq-item {
+  padding: 24px 16px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  
+  background-color: rgba(255, 255, 255, 0.050);
+  backdrop-filter: blur(30px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  transition: .5s;
+}
+
+.faq-item:hover {
+  transform: scale(1.02); /* Slight scale effect */
+}
+.faq-item:active {
+  transform: scale(1); /* Remove scale effect */
+}
+
+
+.faq-item h3 {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+  padding: 0px 10px;
+  padding-left: 0px;
+  color: #ccc;
+}
+
+
+/* ========================= P A G E  5 - S T A R T S ========================== */
+
+.fifthPage {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: white;
+  height: auto;
+}
+
+.fifthPageContainer {
+  height: 100vh;
+  width: 80%;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 2rem;
+}
+
+
+.contactTextContainer {
+  
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 80%;
+  width: 50%;
+
+  text-align: center;
+  /* border: 1px solid greenyellow; */
+}
+
+.contactTextContainer h2 {
+  font-size: 4.3vw;
+  line-height: 1.1;
+  margin-bottom: 10px;
+}
+
+.contactTextContainer h4 {
+  font-size: 1.3vw;
+  margin-bottom: 10px;
+}
+
+.socialMediaHandles {
+  height: 80%;
+  width: 90%;
+
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.socialMediaHandles a {
+  width: 100%;
+   
+  color: white;
+  display: flex;
+  align-items: center;
+  
+  background-color: rgba(255, 255, 255, 0.050);
+  backdrop-filter: blur(30px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  
+  /* padding: 0px 40px; */
+}
+
+.socialMediaHandles img {
+  position: relative;
+  left: 40px;
+}
+
+.socialMediaHandles h4 {
+  position: relative;
+  left: 84px;
+  top: 4px;
+}
+
+
+.xIconContainer {
+  width: 100%;
+  padding: 10px 40px;
+  transition: .5s;
+}
+.xIcon {
+  width: 52px;
+  filter: invert(1);
+}
+
+.discordIconContainer {
+  padding: 7px 40px;
+  transition: .5s;
+}  
+.discordIcon {
+  width: 46px;
+  filter: invert(1);
+}
+
+.linkedinIconContainer {
+  padding: 10px 40px;
+  transition: .5s;
+}
+.linkedinIcon {
+  width: 42px;
+  filter: invert(1);
+}
+
+.instagramIconContainer {
+  padding: 6px 40px;
+  transition: .5s;
+}
+
+.instagramIcon{
+  width: 46px;
+  filter: invert(1);
+}
+
+.socialMediaIconsHoverEffects:hover {
+  transform: scale(1.05); /* Slight scale effect */
+}
+
+
+
+
+
+
+.contactFormContainer {
+  
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 80%;
+  width: 50%;
+  text-align: start;
+}
+
+.contactFormContainer h3 {
+  text-align: center;
+  font-size: 1.95vw;
+  padding-bottom: 24px;
+}
+
+.formParent {
+  width: 100%;
+  height: 100%;
+}
+
+.contactFormContainer input {
+  width: 100%;
+  padding: 12px 24px;
+  
+  color: white;
+  font-size: 1.2rem;
+
+  background-color: rgba(255, 255, 255, 0.050);
+  backdrop-filter: blur(30px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  outline: none;
+
+  margin-bottom: 8px;
+}
+
+.contactFormContainer input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.3rem;
+}
+
+.contactFormContainer textarea {
+  height: 180px;
+  width: 100%;
+  padding: 10px 24px;
+  
+  color: white;
+  font-size: 1.2rem;
+
+  background-color: rgba(255, 255, 255, 0.050);
+  backdrop-filter: blur(30px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  outline: none;
+  
+  margin-bottom: 8px;
+}
+.contactFormContainer textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.3rem;
+}
+
+.contactFormContainer button {
+  width: 100%;
+  padding: 12px 200px 14px;
+  color: white;
+  letter-spacing: -1px;
+  background: rgba(0, 0, 0, 0.3); /* Transparent background */
+  backdrop-filter: blur(5px); /* Blur effect */
+  font-size: 1.5vw;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 25px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: color 0.4s ease-in-out;
+  z-index: 1;
+  font-weight: 500;
+}
